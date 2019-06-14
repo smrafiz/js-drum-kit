@@ -1,0 +1,57 @@
+{
+	"name": "js-drum-kit",
+	"version": "1.0.0",
+	"description": "A Simple Drum Kit built by Vanilla JS",
+	"main": "codexin.config.js",
+	"devDependencies": {
+		"beepbeep": "^1.2.2",
+		"browser-sync": "^2.26.7",
+		"del": "^4.1.1",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-cache": "^1.1.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-cssbeautify": "^1.0.1",
+		"gulp-filter": "^6.0.0",
+		"gulp-if": "^2.0.2",
+		"gulp-ignore": "^2.0.2",
+		"gulp-imagemin": "^6.0.0",
+		"gulp-jshint": "^2.1.0",
+		"gulp-line-ending-corrector": "^1.0.3",
+		"gulp-load-plugins": "^1.6.0",
+		"gulp-merge-media-queries": "^0.2.1",
+		"gulp-newer": "^1.4.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-pixrem": "^1.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-pug": "^4.0.1",
+		"gulp-remember": "^1.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-rtlcss": "^1.3.0",
+		"gulp-run-sequence": "^0.3.2",
+		"gulp-sass": "^4.0.2",
+		"gulp-sort": "^2.0.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
+		"gulp-uglifycss": "^1.1.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/smrafiz/js-drum-kit.git"
+	},
+	"keywords": [
+		"JS",
+		"Vanilla-JS",
+		"Drum-Kit"
+	],
+	"author": "S.M. Rafiz",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/smrafiz/js-drum-kit/issues"
+	},
+	"homepage": "https://github.com/smrafiz/js-drum-kit#readme"
+}

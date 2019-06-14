@@ -48,7 +48,8 @@ gulpfile.js
 assets/css/theme.css
 assets/css/theme.css.map
 assets/css/theme.min.css
-package.json
+# package.json
+package-lock.json
 assets/css/shortcodes.css
 assets/css/shortcodes.css.map
 assets/js/main.js
