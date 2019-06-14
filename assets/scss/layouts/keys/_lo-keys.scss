@@ -1,0 +1,12 @@
+/**
+ * Layout Keys
+ *
+ */
+
+.keys {
+	display: flex;
+	flex: 1;
+	min-height: calc(100vh - 4px);
+	align-items: center;
+	justify-content: center;
+}

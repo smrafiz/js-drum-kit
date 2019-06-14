@@ -1,0 +1,79 @@
+//-------------------- Base Typography --------------------//
+
+$cx-body-font: 'Source Sans Pro', sans-serif !default;
+$cx-heading-font: 'Oswald', sans-serif !default;
+
+//-------------------- Font Sizes --------------------//
+
+$cx-body-font-size: 10px !default;
+$cx-h1-font-size: 32px !default;
+$cx-h2-font-size: 28px !default;
+$cx-h3-font-size: 24px !default;
+$cx-h4-font-size: 21px !default;
+$cx-h5-font-size: 19px !default;
+$cx-h6-font-size: 16px !default;
+$cx-icon-font-size: 14px !default;
+
+//-------------------- Base Color --------------------//
+
+$cx-text-color: #000 !default;
+$cx-body-bg-color: #fff !default;
+$cx-primary-color: #42ad61 !default;
+$cx-secondary-color: #f58025 !default;
+$cx-tertiary-color: #212331 !default;
+$cx-offset-color: #f6f6f6 !default;
+$cx-border-color: #ddd !default;
+
+//-------------------- Line Height --------------------//
+
+$cx-body-line-height: 24px !default;
+$cx-body-font-weight: 400 !default;
+
+//-------------------- Default Spacing --------------------//
+
+$cx-heading-margin-bottom: 25px !default;
+$cx-section-spacing: 80px !default;
+$cx-col-spacing: 0.5 * $cx-section-spacing !default; // will be used as bottom margin/padding
+
+//-------------------- Default Mobile Spacing --------------------//
+
+$shrink-factor: 0.75 !default; // shrink spacing for mobile
+$cx-col-spacing-mob: $shrink-factor * $cx-col-spacing !default; // shrink col spacing for mobile
+$cx-section-spacing-mob: $shrink-factor * $cx-section-spacing !default; // shrink col spacing for mobile
+
+//-------------------- Default Transition --------------------//
+
+$cx-transition: all 0.7s cubic-bezier(0.2, 1, 0.22, 1) !default;
+
+//-------------------- Default Breakpoint / Screen Size --------------------//
+
+$cx-lg-screen: 1200px !default;
+$cx-md-screen: 992px !default;
+$cx-sm-screen: 768px !default;
+$cx-vsm-screen: 576px !default;
+
+$cx-breakpoints: (
+	"wide": $cx-lg-screen,
+	"notebook": $cx-md-screen,
+	"tablet": $cx-sm-screen,
+	"small-mobile": $cx-vsm-screen
+);
+
+//-------------------- Social Icon Colors --------------------//
+
+$facebook-color: #3b5998;
+$twitter-color: #1da1f2;
+$gplus-color: #db4437;
+$pinterest-color: #bd081c;
+$instagram-color: #c32aa3;
+$linkedin-color: #007bb5;
+$dribbble-color: #ea4c89;
+$flickr-color: #ff0084;
+$medium-color: #02b875;
+$tumblr-color: #35465d;
+$vimeo-color: #1ab7ea;
+$youtube-color: #ff0000;
+$reddit-color: #ff4500;
+$skype-color: #00aff0;
+$quora-color: #aa2200;
+$yelp-color: #c41200;

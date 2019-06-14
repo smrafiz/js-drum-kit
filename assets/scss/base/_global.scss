@@ -1,0 +1,484 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: url(../images/drum-bg.jpg) center center;
+	background-size: cover;
+}
+
+#main-content {
+	border-top: 4px solid #ffc600;
+}
+
+section {
+	margin-bottom: $cx-section-spacing;
+	display: block;
+	width: 100%;
+	float: none;
+	clear: both;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-section-spacing-mob;
+	}
+}
+
+p {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	@extend %default-margin-bottom;
+}
+
+ul,
+ol,
+table,
+dl,
+pre,
+address {
+	@extend %default-margin-bottom;
+}
+
+dd {
+	@extend %default-margin-bottom;
+}
+
+blockquote {
+	margin: $cx-heading-margin-bottom 0;
+	padding: 30px;
+	font-style: italic;
+	border-left-width: 4px;
+	border-left-style: solid;
+	@extend %border-primary;
+	@extend %bgc-offset;
+
+	p {
+		&:last-of-type {
+			@extend %mb0;
+		}
+	}
+
+	cite {
+		font-style: normal;
+		display: block;
+		margin: 20px 0 0;
+		@extend %color-dark;
+
+		&::before {
+			content: "— ";
+		}
+	}
+}
+
+hr {
+	@extend %mt-full;
+	@extend %mb-full;
+}
+
+kbd {
+	@extend %bgc-primary;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+thead {
+	background: #eee;
+}
+
+td,
+th {
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 90%;
+	@extend %border-default;
+}
+
+table tbody tr:nth-child(odd) {
+	@extend %bgc-offset;
+}
+
+table tbody tr:nth-child(even) {
+	@extend %bgc-white;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	backface-visibility: hidden;
+}
+
+dl:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+dl {
+	width: 100%;
+}
+
+dt,
+dd {
+	display: inline-block;
+	width: 25%;
+}
+
+dt {
+	font-weight: bold;
+	clear: left;
+	float: left;
+}
+
+dd {
+	width: 70%;
+	padding-left: 1em;
+	clear: right;
+}
+
+dd + dd {
+	float: right;
+	clear: both;
+}
+
+dd:last-of-type {
+	@extend %mb0;
+}
+
+dd + dt {
+	clear: both;
+}
+
+dt + dt {
+	width: 100%;
+	float: none;
+	padding: 0 70% 0 0;
+}
+
+dt + dt + dd {
+	margin-top: -2em;
+}
+
+dt + dt + dd + dt {
+	margin-top: 2em;
+}
+
+ul {
+	list-style-type: disc;
+	@extend %padding-0;
+
+	&.list-inline {
+		margin-left: 0;
+	}
+}
+
+ol {
+	@extend %padding-0;
+}
+
+ul,
+ol {
+	margin-left: 18px;
+
+	li {
+		padding-bottom: 8px;
+
+		&:last-child {
+			@extend %pb0;
+		}
+	}
+
+	ol,
+	ul {
+		padding-top: 8px;
+	}
+}
+
+pre {
+	padding: 30px;
+	display: block;
+	clear: both;
+	overflow: auto;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
+	@extend %border-default;
+	@extend %bgc-offset;
+
+	b,
+	strong {
+		font-weight: 600;
+	}
+}
+
+*:focus {
+	outline: none;
+}
+
+a {
+	@extend %cx-transition;
+	@extend %color-primary;
+}
+
+a:focus,
+a:active,
+a:hover {
+	outline: 0 none;
+	@extend %color-secondary;
+}
+
+legend {
+	padding: 7px 0px;
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="email"],
+input[type="button"],
+input[type="reset"],
+input[type="password"],
+input[type="search"],
+input[type="tel"] {
+	box-shadow: none;
+	border-radius: 0;
+	height: 40px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 10px;
+	@extend %cx-transition;
+	@extend %border-default;
+
+	&:focus {
+		box-shadow: none;
+		@extend %border-primary;
+	}
+}
+
+select {
+	width: 100%;
+	padding: 5px 10px;
+}
+
+textarea {
+	min-height: 100px;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+	border: 0;
+	padding: 0 30px;
+	display: inline-block;
+	box-shadow: none;
+	cursor: pointer;
+	@extend %cx-transition;
+	@extend %bgc-primary;
+	@extend %color-white;
+}
+
+select:focus,
+button:focus,
+input:focus {
+	outline: 0;
+	@extend %border-primary;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+	@extend %border-secondary;
+	@extend %bgc-secondary;
+}
+
+figure,
+iframe,
+embed,
+object,
+select {
+	max-width: 100%;
+}
+
+.visually-hidden {
+	@extend %visuallyhidden;
+}
+
+/* global notice */
+
+.browserupgrade {
+	padding: 50px;
+	background: #dedede;
+	font-size: 20.5px;
+	text-align: center;
+}
+
+.rb-bordered {
+	@extend %cx-right-bottom-border;
+}
+
+.tr-bordered {
+	@extend %cx-top-right-border;
+}
+
+.bl-bordered {
+	@extend %cx-bottom-left-border;
+}
+
+.lt-bordered {
+	@extend %cx-left-top-border;
+}
+
+.top-bordered {
+	@extend %cx-top-border;
+}
+
+.right-bordered {
+	@extend %cx-right-border;
+}
+
+.bottom-bordered {
+	@extend %cx-bottom-border;
+}
+
+.left-bordered {
+	@extend %cx-left-border;
+}
+
+.vmargin {
+	@extend %vmargin;
+}
+
+.mb0 {
+	@extend %mb0;
+}
+
+.pb0 {
+	@extend %pb0;
+}
+
+.mt0 {
+	@extend %mt0;
+}
+
+.pt0 {
+	@extend %pt0;
+}
+
+.nomargin {
+	@extend %margin-0;
+}
+
+.vpadding {
+	@extend %vpadding;
+}
+
+.nopadding {
+	@extend %padding-0;
+}
+
+.mt-full {
+	@extend %mt-full;
+}
+
+.mb-full {
+	@extend %mb-full;
+}
+
+.pt-full {
+	@extend %pt-full;
+}
+
+.pb-full {
+	@extend %pb-full;
+}
+
+.mt-half {
+	@extend %mt-half;
+}
+
+.mb-half {
+	@extend %mb-half;
+}
+
+.pt-half {
+	@extend %pt-half;
+}
+
+.pb-half {
+	@extend %pb-half;
+}
+
+/* Special Padding & Margin */
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.pt-30 {
+	padding-top: 30px;
+}
+
+.pb-30 {
+	padding-bottom: 30px;
+}
+
+/* Border-radius */
+
+.rounded-corners {
+	@extend %rounded-corners;
+}
+
+.circle {
+	@include border-radius(50%);
+}
+
+.oflow-hidden {
+	@extend %overflow-hidden;
+}
+
+// Position
+
+.pos-r {
+	@extend %pos-r;
+}
+
+.pos-a {
+	@extend %pos-a;
+}
+
+/* Tooltips */
+
+.tooltip {
+	z-index: 9950;
+	.arrow {
+		&::before {
+			border-top-color: $cx-tertiary-color;
+		}
+	}
+
+	.tooltip-inner {
+		border-radius: 0;
+		@extend %bgc-tertiary;
+	}
+
+	.modal-open & {
+		z-index: 9990;
+	}
+}
