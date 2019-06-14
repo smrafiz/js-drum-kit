@@ -1,5 +1,5 @@
-var data = {
-	keyPlay: function(key, audio) {
+var handler = {
+	play: function(key, audio) {
 		key.classList.add('playing');
 		audio.currentTime = 0;
 		audio.play();
@@ -13,7 +13,7 @@ var data = {
 			return;
 		}
 
-		data.keyPlay(key, audio);
+		handler.play(key, audio);
 	},
 
 	clickSound: function(e) {
@@ -25,10 +25,10 @@ var data = {
 			return;
 		}
 
-		data.keyPlay(key, audio);
+		handler.play(key, audio);
 	},
 
-	removeTransition: function(e) {
+	removeClass: function(e) {
 		if (e.propertyName !== 'transform') {
 			return;
 		}
@@ -38,15 +38,15 @@ var data = {
 };
 
 var view = {
-	eventListeners: function() {
+	init: function() {
 		var keys = document.querySelectorAll('.key');
 		keys.forEach(function(key) {
-			key.addEventListener('transitionend', data.removeTransition);
+			key.addEventListener('transitionend', handler.removeClass);
 		});
 
-		window.addEventListener('keydown', data.playSound);
-		window.addEventListener('click', data.clickSound);
+		window.addEventListener('keydown', handler.playSound);
+		window.addEventListener('click', handler.clickSound);
 	}
 };
 
-view.eventListeners();
+view.init();

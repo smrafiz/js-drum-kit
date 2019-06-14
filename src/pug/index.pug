@@ -9,79 +9,75 @@ html(lang="en")
 	//- Body Contents.
 	body
 		#main-content
-			.container
-				.row
-					.col-12
-						-
-							var keydata = [];
-							keydata.push(
-								{
-									'keycode': 65,
-									'key': 'A',
-									'content': 'clap',
-									'audio': 'assets/sounds/clap.wav'
-								},
-								{
-									'keycode': 83,
-									'key': 'S',
-									'content': 'hihat',
-									'audio': 'assets/sounds/hihat.wav'
-								},
-								{
-									'keycode': 68,
-									'key': 'D',
-									'content': 'kick',
-									'audio': 'assets/sounds/kick.wav'
-								},
-								{
-									'keycode': 70,
-									'key': 'F',
-									'content': 'openhat',
-									'audio': 'assets/sounds/openhat.wav'
-								},
-								{
-									'keycode': 71,
-									'key': 'G',
-									'content': 'boom',
-									'audio': 'assets/sounds/boom.wav'
-								},
-								{
-									'keycode': 72,
-									'key': 'H',
-									'content': 'ride',
-									'audio': 'assets/sounds/ride.wav'
-								},
-								{
-									'keycode': 74,
-									'key': 'J',
-									'content': 'snare',
-									'audio': 'assets/sounds/snare.wav'
-								},
-								{
-									'keycode': 75,
-									'key': 'K',
-									'content': 'tom',
-									'audio': 'assets/sounds/tom.wav'
-								},
-								{
-									'keycode': 76,
-									'key': 'L',
-									'content': 'tink',
-									'audio': 'assets/sounds/tink.wav'
-								}
-							);
+			-
+				var keydata = [];
+				keydata.push(
+					{
+						'keycode': 65,
+						'key': 'A',
+						'content': 'clap',
+						'audio': 'assets/sounds/clap.wav'
+					},
+					{
+						'keycode': 83,
+						'key': 'S',
+						'content': 'hihat',
+						'audio': 'assets/sounds/hihat.wav'
+					},
+					{
+						'keycode': 68,
+						'key': 'D',
+						'content': 'kick',
+						'audio': 'assets/sounds/kick.wav'
+					},
+					{
+						'keycode': 70,
+						'key': 'F',
+						'content': 'openhat',
+						'audio': 'assets/sounds/openhat.wav'
+					},
+					{
+						'keycode': 71,
+						'key': 'G',
+						'content': 'boom',
+						'audio': 'assets/sounds/boom.wav'
+					},
+					{
+						'keycode': 72,
+						'key': 'H',
+						'content': 'ride',
+						'audio': 'assets/sounds/ride.wav'
+					},
+					{
+						'keycode': 74,
+						'key': 'J',
+						'content': 'snare',
+						'audio': 'assets/sounds/snare.wav'
+					},
+					{
+						'keycode': 75,
+						'key': 'K',
+						'content': 'tom',
+						'audio': 'assets/sounds/tom.wav'
+					},
+					{
+						'keycode': 76,
+						'key': 'L',
+						'content': 'tink',
+						'audio': 'assets/sounds/tink.wav'
+					}
+				);
 
-						main.main
-							.keys
-								each key in keydata
-									+key(key.keycode, key.key, key.content)
+			main#primary
+				.keys
+					each key in keydata
+						+key(key.keycode, key.key, key.content)
 
-							#audio
-								each key in keydata
-									audio(data-key=key.keycode, src=key.audio)
+				#audio
+					each key in keydata
+						audio(data-key=key.keycode, src=key.audio)
 
-						<!-- .main -->
-			<!-- .container -->
+			<!-- .main -->
 		<!-- #main-content -->
 
 		// Scripts.

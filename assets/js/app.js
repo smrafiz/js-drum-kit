@@ -1,7 +1,7 @@
 "use strict";
 
-var data = {
-  keyPlay: function keyPlay(key, audio) {
+var handler = {
+  play: function play(key, audio) {
     key.classList.add('playing');
     audio.currentTime = 0;
     audio.play();
@@ -14,7 +14,7 @@ var data = {
       return;
     }
 
-    data.keyPlay(key, audio);
+    handler.play(key, audio);
   },
   clickSound: function clickSound(e) {
     var keyCode = e.target.parentNode.getAttribute('data-key');
@@ -25,9 +25,9 @@ var data = {
       return;
     }
 
-    data.keyPlay(key, audio);
+    handler.play(key, audio);
   },
-  removeTransition: function removeTransition(e) {
+  removeClass: function removeClass(e) {
     if (e.propertyName !== 'transform') {
       return;
     }
@@ -36,13 +36,13 @@ var data = {
   }
 };
 var view = {
-  eventListeners: function eventListeners() {
+  init: function init() {
     var keys = document.querySelectorAll('.key');
     keys.forEach(function (key) {
-      key.addEventListener('transitionend', data.removeTransition);
+      key.addEventListener('transitionend', handler.removeClass);
     });
-    window.addEventListener('keydown', data.playSound);
-    window.addEventListener('click', data.clickSound);
+    window.addEventListener('keydown', handler.playSound);
+    window.addEventListener('click', handler.clickSound);
   }
 };
-view.eventListeners();
+view.init();

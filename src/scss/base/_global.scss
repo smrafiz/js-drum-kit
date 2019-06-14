@@ -2,7 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 }
 
 body {
@@ -325,38 +325,6 @@ select {
 	text-align: center;
 }
 
-.rb-bordered {
-	@extend %cx-right-bottom-border;
-}
-
-.tr-bordered {
-	@extend %cx-top-right-border;
-}
-
-.bl-bordered {
-	@extend %cx-bottom-left-border;
-}
-
-.lt-bordered {
-	@extend %cx-left-top-border;
-}
-
-.top-bordered {
-	@extend %cx-top-border;
-}
-
-.right-bordered {
-	@extend %cx-right-border;
-}
-
-.bottom-bordered {
-	@extend %cx-bottom-border;
-}
-
-.left-bordered {
-	@extend %cx-left-border;
-}
-
 .vmargin {
 	@extend %vmargin;
 }
@@ -446,7 +414,7 @@ select {
 }
 
 .circle {
-	@include border-radius(50%);
+	border-radius: 50%;
 }
 
 .oflow-hidden {
@@ -461,24 +429,4 @@ select {
 
 .pos-a {
 	@extend %pos-a;
-}
-
-/* Tooltips */
-
-.tooltip {
-	z-index: 9950;
-	.arrow {
-		&::before {
-			border-top-color: $cx-tertiary-color;
-		}
-	}
-
-	.tooltip-inner {
-		border-radius: 0;
-		@extend %bgc-tertiary;
-	}
-
-	.modal-open & {
-		z-index: 9990;
-	}
 }

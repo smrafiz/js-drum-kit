@@ -42,13 +42,7 @@ h5,
 h6 {
 	font-family: $cx-heading-font;
 	font-weight: 400;
-	// @extend %color-primary;
 	@extend %default-heading;
-}
-
-:not(.elementor-icon) > .fa,
-:not(.elementor-icon) > .ion {
-	font-size: $cx-icon-font-size;
 }
 
 address {
@@ -90,20 +84,6 @@ input[type="reset"],
 input[type="password"],
 input[type="search"],
 input[type="tel"] {
-	font-size: 12px;
-}
-
-.post-date {
-	display: block;
-	font-size: 14px;
-	font-style: italic;
-}
-
-.input-group,
-.input-group input,
-.input-group select,
-.input-group .dropdown-menu,
-.input-group .popover {
 	font-size: 12px;
 }
 
