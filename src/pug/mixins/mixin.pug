@@ -1,0 +1,23 @@
+//- Button mixin
+mixin button(event, content)
+    button(
+        id!=attributes.id,
+        class!=attributes.class,
+        onclick= event
+    )= content
+
+//- Input mixin
+mixin input(type, name, placebolder)
+    input(
+        id!=attributes.id,
+        class!=attributes.class,
+        type= type,
+        name= name,
+        placeholder= placebolder
+    )
+
+//- Keys mixin
+mixin key(keycode, key, content)
+    .key(data-key=keycode)
+        kbd= key
+        span.sound= content
