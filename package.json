@@ -4,12 +4,14 @@
 	"description": "A Simple Drum Kit built by Vanilla JS",
 	"main": "aurora.config.js",
 	"devDependencies": {
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
 		"beepbeep": "^1.2.2",
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.26.3",
 		"del": "^4.1.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
-		"gulp-babel": "^8.0.0",
+		"gulp-babel": "^8.0.0-beta.2",
 		"gulp-cache": "^1.1.2",
 		"gulp-concat": "^2.6.1",
 		"gulp-cssbeautify": "^1.0.1",
@@ -43,7 +45,11 @@
 		"type": "git",
 		"url": "git+https://github.com/smrafiz/js-drum-kit.git"
 	},
-	"keywords": [ "JS", "Vanilla-JS", "Drum-Kit" ],
+	"keywords": [
+		"JS",
+		"Vanilla-JS",
+		"Drum-Kit"
+	],
 	"author": "S.M. Rafiz",
 	"license": "ISC",
 	"bugs": {

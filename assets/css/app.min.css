@@ -71,9 +71,9 @@ button,input[type="reset"],input[type="button"],input[type="submit"]{text-transf
 ::-moz-placeholder{color:#000;font-size:13px}
 :-ms-input-placeholder{color:#000;font-size:13px}
 :-moz-placeholder{color:#000;font-size:13px}
-::-webkit-selection{background-color:#42ad61;text-shadow:none;color:#fff}
-::-moz-selection{background-color:#42ad61;text-shadow:none;color:#fff}
-::selection{background-color:#42ad61;text-shadow:none;color:#fff}
+::-webkit-selection{background-color:#ffc600;text-shadow:none;color:#fff}
+::-moz-selection{background-color:#ffc600;text-shadow:none;color:#fff}
+::selection{background-color:#ffc600;text-shadow:none;color:#fff}
 .vpadding{padding-top:80px;padding-bottom:80px}
 @media only screen and (max-width:767px){.vpadding{padding-top:60px;padding-bottom:60px}
 }.pb-full{padding-bottom:80px}
@@ -116,7 +116,7 @@ a,textarea,select,input[type="text"],input[type="url"],input[type="number"],inpu
 .rounded-corners{border-radius:22px}
 .pos-r{position:relative}
 .pos-a{position:absolute}
-a,.color-primary,.has-primary-color{color:#42ad61}
+a,.color-primary,.has-primary-color{color:#ffc600}
 a:focus,a:active,a:hover,.color-secondary,.has-secondary-color{color:#f58025}
 .color-tertiary,.has-tertiary-color{color:#212331}
 .color-transparent{color:transparent}
@@ -124,7 +124,7 @@ a:focus,a:active,a:hover,.color-secondary,.has-secondary-color{color:#f58025}
 button,input[type="reset"],input[type="button"],input[type="submit"],.color-white,.key{color:white}
 blockquote cite,.color-dark{color:#252525}
 .color-black{color:#000}
-kbd,button,input[type="reset"],input[type="button"],input[type="submit"],.bgc-primary,.has-primary-background-color{background-color:#42ad61}
+kbd,button,input[type="reset"],input[type="button"],input[type="submit"],.bgc-primary,.has-primary-background-color{background-color:#ffc600}
 button:hover,input[type="submit"]:hover,input[type="button"]:hover,.bgc-secondary,.has-secondary-background-color{background-color:#f58025}
 .tooltip .tooltip-inner,.bgc-tertiary,.has-tertiary-background-color{background-color:#212331}
 .bgc-transparent{background-color:transparent}
@@ -133,7 +133,7 @@ blockquote,table tbody tr:nth-child(odd),pre,.bgc-offset,.has-offset-background-
 table tbody tr:nth-child(even),.bgc-white{background-color:white}
 .bgc-dark{background-color:#252525}
 .bgc-black{background-color:#000}
-blockquote,textarea:focus,select:focus,input[type="text"]:focus,input[type="url"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="button"]:focus,input[type="reset"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,button:focus,input:focus,.border-primary{border-color:#42ad61}
+blockquote,textarea:focus,select:focus,input[type="text"]:focus,input[type="url"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="button"]:focus,input[type="reset"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,button:focus,input:focus,.border-primary{border-color:#ffc600}
 button:hover,input[type="submit"]:hover,input[type="button"]:hover,.border-secondary{border-color:#f58025}
 .border-tertiary{border-color:#212331}
 td,th,pre,textarea,select,input[type="text"],input[type="url"],input[type="number"],input[type="email"],input[type="button"],input[type="reset"],input[type="password"],input[type="search"],input[type="tel"],.top-bordered,.right-bordered,.bottom-bordered,.left-bordered,.rb-bordered,.bl-bordered,.tr-bordered,.lt-bordered,.border-default{border-color:#ddd}
