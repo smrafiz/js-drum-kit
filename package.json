@@ -2,7 +2,7 @@
 	"name": "js-drum-kit",
 	"version": "1.0.0",
 	"description": "A Simple Drum Kit built by Vanilla JS",
-	"main": "codexin.config.js",
+	"main": "aurora.config.js",
 	"devDependencies": {
 		"beepbeep": "^1.2.2",
 		"browser-sync": "^2.26.7",
@@ -43,11 +43,7 @@
 		"type": "git",
 		"url": "git+https://github.com/smrafiz/js-drum-kit.git"
 	},
-	"keywords": [
-		"JS",
-		"Vanilla-JS",
-		"Drum-Kit"
-	],
+	"keywords": [ "JS", "Vanilla-JS", "Drum-Kit" ],
 	"author": "S.M. Rafiz",
 	"license": "ISC",
 	"bugs": {
